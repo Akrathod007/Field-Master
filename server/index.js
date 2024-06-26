@@ -8,6 +8,8 @@ const app = express();
 const MONGO_DB = "mongodb://localhost:27017/userDatabase";
 
 //Middleware
+// IBXSyFTet7LvC0V2
+// mongodb+srv://vikramrathod1979:IBXSyFTet7LvC0V2@cluster0.qe5vzld.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 app.use(cors());
 app.use(express.json());
 mongoose.connect(MONGO_DB);

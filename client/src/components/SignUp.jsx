@@ -55,10 +55,13 @@ function SignUp() {
       icon: "success",
       confirmButtonText: "Okay",
     }).then(() => {
-      window.location = "/";
+      window.location = "/login";
     });
   };
 
+  // mongodb+srv://anshrathod2104:<password>@cluster0.g8m0vcn.mongodb.net/
+  // Anshrathod@mongodb
+  // mongodb+srv://AnshRathod007:Anshrathod@mongodb@cluster0.g8m0vcn.mongodb.net/
   return (
     <div>
       <div className="fixed bottom-3 right-2 w-10 h-10 border rounded-md bg-[#F97316]">
