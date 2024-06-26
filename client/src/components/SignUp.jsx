@@ -55,7 +55,7 @@ function SignUp() {
       icon: "success",
       confirmButtonText: "Okay",
     }).then(() => {
-      window.location = "/loginpage";
+      window.location = "/";
     });
   };
 
