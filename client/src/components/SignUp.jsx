@@ -5,23 +5,53 @@ import "animate.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Swal from "sweetalert2";
+import axios from "axios";
 
 function SignUp() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [address, setAddress] = useState("");
-  const [city, setCity] = useState("");
-  const [pincode, setPincode] = useState("");
-  const [country, setCountry] = useState("");
-  const [state, setState] = useState("");
+  const [userRegister, setUser] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    address: "",
+    city: "",
+    pincode: "",
+    country: "",
+    state: "",
+  });
+  let name, value;
+  const handleInputs = (e) => {
+    console.log(e);
+    name = e.target.name;
+    value = e.target.value;
 
-  const storeData = (e) => {
+    setUser({
+      ...userRegister,
+      [name]: value,
+    });
+  };
+
+  const handleRegister = async (e) => {
     e.preventDefault();
+    const register = await axios.post(
+      " http://localhost:3000/register",
+      userRegister
+    );
+    console.log(register.data);
+    setUser({
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+      address: "",
+      city: "",
+      pincode: "",
+      country: "",
+      state: "",
+    });
     Swal.fire({
       title: "Success",
-      text: "Data Submitted",
+      text: "Registration Successfully",
       icon: "success",
       confirmButtonText: "Okay",
     }).then(() => {
@@ -50,20 +80,22 @@ function SignUp() {
         <h2 className="text-4xl text-center mb-4 text-orange-600 font-semibold">
           Field Master
         </h2>
-        <form className="grid grid-cols-2 gap-x-8 gap-y-4" onSubmit={storeData}>
+        <form
+          className="grid grid-cols-2 gap-x-8 gap-y-4"
+          onSubmit={handleRegister}
+        >
           <div className="flex flex-col">
             <label className="font-semibold mb-2 text-zinc-600">
               First Name
             </label>
             <input
-              onChange={(e) => {
-                setFirstName(e.target.value);
-              }}
+              onChange={handleInputs}
+              value={userRegister.firstName}
               type="text"
               className="border p-2 rounded"
               name="firstName"
               placeholder="Enter First Name"
-              required="true"
+              required
             />
           </div>
 
@@ -72,112 +104,104 @@ function SignUp() {
               Last Name
             </label>
             <input
-              onChange={(e) => {
-                setLastName(e.target.value);
-              }}
+              onChange={handleInputs}
+              value={userRegister.lastName}
               type="text"
               className="border p-2 rounded"
-              name="lasttName"
+              name="lastName"
               placeholder="Enter Last Name"
-              required="true"
+              required
             />
           </div>
 
           <div className="flex flex-col">
             <label className="font-semibold mb-2 text-zinc-600">Email</label>
             <input
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
+              onChange={handleInputs}
+              value={userRegister.email}
               type="email"
               className="border p-2 rounded"
               name="email"
               placeholder="Enter Email"
-              required="true"
+              required
             />
           </div>
 
           <div className="flex flex-col">
             <label className="font-semibold mb-2 text-zinc-600">Password</label>
             <input
-              onChange={(e) => {
-                setPassword(e.target.value);
-              }}
+              onChange={handleInputs}
+              value={userRegister.password}
               type="password"
               className="border p-2 rounded"
-              name="phoneNo"
+              name="password"
               placeholder="Password"
-              required="true"
+              required
             />
           </div>
 
           <div className="flex flex-col col-span-2">
             <label className="font-semibold mb-2 text-zinc-600">Address</label>
             <input
-              onChange={(e) => {
-                setAddress(e.target.value);
-              }}
+              onChange={handleInputs}
+              value={userRegister.address}
               type="text"
               className="border p-2 rounded"
               name="address"
               placeholder="Enter Your Address"
-              required="true"
+              required
             />
           </div>
 
           <div className="flex flex-col">
             <label className="font-semibold mb-2 text-zinc-600">City</label>
             <input
-              onChange={(e) => {
-                setCity(e.target.value);
-              }}
+              onChange={handleInputs}
+              value={userRegister.city}
               type="text"
               className="border p-2 rounded"
               name="city"
               placeholder="Enter City"
-              required="true"
+              required
             />
           </div>
 
           <div className="flex flex-col">
             <label className="font-semibold mb-2 text-zinc-600">PinCcode</label>
             <input
-              onChange={(e) => {
-                setPincode(e.target.value);
-              }}
-              type="number"
+              onChange={handleInputs}
+              value={userRegister.pincode}
+              type="text"
               className="border p-2 rounded"
               name="pincode"
               placeholder="Enter Pincode"
-              required="true"
+              required
             />
           </div>
 
           <div className="flex flex-col">
             <label className="font-semibold mb-2 text-zinc-600">Country</label>
             <input
-              onChange={(e) => {
-                setCountry(e.target.value);
-              }}
+              onChange={handleInputs}
+              value={userRegister.country}
               type="text"
               className="border p-2 rounded"
               name="country"
               placeholder="Enter Your Country"
-              required="true"
+              required
             />
           </div>
 
           <div className="flex flex-col">
             <label className="font-semibold mb-2 text-zinc-600">State</label>
             <input
-              onChange={(e) => {
-                setState(e.target.value);
-              }}
+              onChange={handleInputs}
+              value={userRegister.state}
               type="text"
               className="border p-2 rounded"
               name="state"
               placeholder="Enter Your State"
-              required="true"
+              required
             />
           </div>
 

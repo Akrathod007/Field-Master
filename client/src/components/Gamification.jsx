@@ -17,20 +17,20 @@ function Gamification() {
       </div>
 
       <div
-        className="w-4/12 mx-auto text-center text-black rounded-md px-28 py-7 m-10 bg-transparent border-2 border-orange-500 
-        hover:bg-orange-500 hover:text-white duration-300 animate__animated animate__zoomIn"
+        className="md:w-6/12 w-7/12 mx-auto text-center border-2 border-orange-500 text-white rounded-md md:px-28 md:py-7 px-10 py-3 m-10 bg-[#EA580C] 
+      hover:bg-transparent hover:text-black duration-300 animate__animated animate__zoomIn"
       >
-        <h1 className="font-semibold text-4xl">Gamification</h1>
+        <h1 className="font-semibold  md:text-4xl text-xl">Gamification</h1>
       </div>
       <div className="m-5 flex flex-col gap-7">
-        <div className="w-7/12 border-2 ml-[150px] p-4 flex gap-6 shadow-lg rounded-lg ">
+        <div className="xl:w-7/12 w-5/12 border-2 xl:ml-[150px] mx-auto p-4 flex xl:flex-row flex-col items-center  gap-6 shadow-lg rounded-lg ">
           <img
             src="./images/flex.png"
             alt=""
             className="w-[400px] rounded-md"
           />
 
-          <div className="w-[100%] text-center flex flex-col justify-around">
+          <div className="w-[100%] text-center flex flex-col gap-5 justify-around">
             <h2
               className="text-center border-2 border-orange-500 p-3 text-2xl rounded-lg 
             hover:scale-105 duration-500"
@@ -47,23 +47,23 @@ function Gamification() {
               manipulate elements alignment, spacing, and order within a
               container.
             </p>
-            <Link
+            <button
               className="bg-orange-500 px-2 py-3 text-white text-2xl font-semibold rounded-lg"
-              to="/flexgame"
+              onClick={() => navigate("/flexgame")}
             >
               Play Now
-            </Link>
+            </button>
           </div>
         </div>
 
-        <div className="w-7/12 border-2 mx-auto p-4 flex gap-6 shadow-lg rounded-lg ">
+        <div className="xl:w-7/12 w-5/12  border-2 mx-auto p-4 flex gap-6 xl:flex-row flex-col items-center shadow-lg rounded-lg ">
           <img
             src="./images/animatecss.png"
             alt=""
-            className="w-[400px] rounded-md"
+            className="w-[400px] max-[400px]:w-[800px] rounded-md"
           />
 
-          <div className="w-[100%] text-center flex flex-col justify-around">
+          <div className="w-[100%] text-center flex flex-col gap-5 justify-around">
             <h2
               className="text-center border-2 border-orange-500 p-3 text-2xl rounded-lg 
             hover:scale-105 duration-500"

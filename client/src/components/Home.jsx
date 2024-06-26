@@ -75,7 +75,7 @@ function Home() {
 
   // console.log(scrollY);
   return (
-    <div>
+    <div className="overflow-hidden">
       <div id="hero">
         <Nav />
       </div>
@@ -116,7 +116,7 @@ function Home() {
       </div>
 
       {/* About us */}
-      <div className=" py-20 flex justify-around gap-8 w-10/12 mx-auto">
+      <div className="py-20 flex lg:justify-around flex-col items-center overflow-hidden gap-8 w-10/12 mx-auto">
         <img
           src="./images/study.jpg"
           alt="study"
@@ -147,18 +147,18 @@ function Home() {
       </div>
 
       {/* Courses */}
-      <div className="w-10/12 flex mx-auto gap-2 flex-col items-center py-20">
+      <div className="w-10/12 flex mx-auto gap-2 flex-col items-center py-20 ">
         <h2 className="font-semibold text-orange-600 text-[30px] uppercase ">
           Courses
         </h2>
         <h3 className="text-center text-slate-600 text-[40px] mb-5">
           Explore Top Courses
         </h3>
-        <div className="flex gap-4 flex-wrap">
+        <div className="flex md:gap-4 md:flex-wrap md:justify-center max-[800px]:flex-col">
           {courses.map((course, index) => {
             return (
               <div
-                className="w-[300px] h-[200px]  bg-black relative overflow-hidden rounded-md group"
+                className="md:w-[300px] md:h-[200px] max-[800px]:w-[450px] max-[800px]:h-[300px] mb-3 bg-black relative overflow-hidden rounded-md group"
                 key={index}
               >
                 <img
@@ -181,19 +181,18 @@ function Home() {
       {/* Contact - Us */}
 
       <div
-        className="w-4/12 mx-auto text-center border-2 border-orange-500 text-white rounded-md px-28 py-7 m-10 bg-[#EA580C] 
+        className="md:w-6/12 w-7/12 mx-auto text-center border-2 border-orange-500 text-white rounded-md md:px-28 md:py-7 px-10 py-3 m-10 bg-[#EA580C] 
       hover:bg-transparent hover:text-black duration-300 animate__animated animate__zoomIn"
       >
-        <h1 className="font-semibold  text-4xl">Contact Us</h1>
+        <h1 className="font-semibold  md:text-4xl text-xl">Contact Us</h1>
       </div>
-      <div className="p-10 flex gap-x-5">
+      <div className="p-10 flex md:gap-x-5 md:flex-row flex-col items-center gap-y-4">
         <img
           src="./images/contact-us.svg"
           alt=""
-          width="50%"
-          className="move"
+          className="move md:w-6/12 w-10/12"
         />
-        <div className="w-6/12 bg-[#EA580C] rounded-md">
+        <div className="md:w-6/12 w-10/12 bg-[#EA580C] rounded-md">
           <form className="flex flex-col" onSubmit={storeData}>
             <div className="flex flex-col gap-2 py-3 px-4">
               <label className="text-white font-semibold">FullName</label>
@@ -262,20 +261,20 @@ function Home() {
 
       {/* Gamification */}
       <div
-        className="w-4/12 mx-auto text-center text-black rounded-md px-28 py-7 m-10 bg-transparent border-2 border-orange-500 
+        className="md:w-6/12 w-7/12 mx-auto text-center text-black rounded-md md:px-28 md:py-7 px-10 py-3 m-10 bg-transparent border-2 border-orange-500 
         hover:bg-orange-500 hover:text-white duration-300 animate__animated animate__zoomIn"
       >
-        <h1 className="font-semibold text-4xl">Gamification</h1>
+        <h1 className="font-semibold md:text-4xl text-xl">Gamification</h1>
       </div>
       <div className="m-5 flex flex-col gap-7">
-        <div className="w-7/12 border-2 ml-[150px] p-4 flex gap-6 shadow-lg rounded-lg ">
+        <div className="xl:w-7/12 w-5/12 border-2 xl:ml-[150px] mx-auto p-4 flex xl:flex-row flex-col items-center  gap-6 shadow-lg rounded-lg ">
           <img
             src="./images/flex.png"
             alt=""
             className="w-[400px] rounded-md"
           />
 
-          <div className="w-[100%] text-center flex flex-col justify-around">
+          <div className="w-[100%] text-center flex flex-col gap-5 justify-around">
             <h2
               className="text-center border-2 border-orange-500 p-3 text-2xl rounded-lg 
             hover:scale-105 duration-500"
@@ -301,14 +300,14 @@ function Home() {
           </div>
         </div>
 
-        <div className="w-7/12 border-2 mx-auto p-4 flex gap-6 shadow-lg rounded-lg ">
+        <div className="xl:w-7/12 w-5/12  border-2 mx-auto p-4 flex gap-6 xl:flex-row flex-col items-center shadow-lg rounded-lg ">
           <img
             src="./images/animatecss.png"
             alt=""
-            className="w-[400px] rounded-md"
+            className="w-[400px] max-[400px]:w-[800px] rounded-md"
           />
 
-          <div className="w-[100%] text-center flex flex-col justify-around">
+          <div className="w-[100%] text-center flex flex-col gap-5 justify-around">
             <h2
               className="text-center border-2 border-orange-500 p-3 text-2xl rounded-lg 
             hover:scale-105 duration-500"
@@ -337,10 +336,10 @@ function Home() {
 
       <div className="p-10">
         <div
-          className="w-4/12 mx-auto text-center text-black rounded-md px-28 py-7 m-10 bg-transparent border-2 border-orange-500 
+          className="md:w-6/12 w-7/12 mx-auto text-center text-black rounded-md md:px-28 md:py-7 px-10 py-3 m-10 bg-transparent border-2 border-orange-500 
         hover:bg-orange-500 hover:text-white duration-300 animate__animated animate__zoomIn"
         >
-          <h1 className="font-semibold text-4xl">Instructor</h1>
+          <h1 className="font-semibold md:text-4xl text-xl">Instructor</h1>
         </div>
         <Swiper
           spaceBetween={30}
@@ -353,10 +352,10 @@ function Home() {
             clickable: true,
           }}
           modules={[Autoplay, Pagination, Navigation]}
-          className="w-6/12 mx-auto border rounded-md"
+          className="xl:w-6/12 w-7/12 mx-auto border rounded-md"
         >
           <SwiperSlide className="flex gap-4 p-6 rounded-md">
-            <div className="flex ">
+            <div className="flex lg:flex-row flex-col items-center">
               <img
                 src="./images/teacher-1.jpg"
                 alt="teacher1"
@@ -389,7 +388,7 @@ function Home() {
           </SwiperSlide>
 
           <SwiperSlide className="flex gap-4 p-6 rounded-md">
-            <div className="flex ">
+            <div className="flex lg:flex-row flex-col items-center ">
               <img
                 src="./images/teacher-4.webp"
                 alt="teacher2"
@@ -424,7 +423,7 @@ function Home() {
           </SwiperSlide>
 
           <SwiperSlide className="flex gap-4  p-6 rounded-md">
-            <div className="flex ">
+            <div className="flex lg:flex-row flex-col items-center ">
               <img
                 src="./images/teacher-3.jpg"
                 alt="teacher3"

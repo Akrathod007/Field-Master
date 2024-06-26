@@ -49,33 +49,34 @@ const courses = [
     courseLink: "/courses",
   },
 ];
+
 function Footer() {
   return (
     <footer className="bg-[#F7F7F8] px-24 py-8 flex flex-col">
-      <div className="flex gap-12">
+      <div className="flex flex-wrap gap-12">
         <div className="space-y-5 w-[400px]">
           <div>
             <h2 className="text-2xl text-orange-600 font-semibold">
               Field Master
             </h2>
 
-            <p class="text-zinc-600 mt-4">
+            <p className="text-zinc-600 mt-4">
               Field Master is a type of online education, training, gamification
               and knowledge sharing that is conducted over the internet.
             </p>
           </div>
-          <div class="flex gap-2 text-gray-500">
-            <i class="ri-map-pin-line"></i>
+          <div className="flex gap-2 text-gray-500">
+            <i className="ri-map-pin-line"></i>
             <address>
               4H4V+F63, Nigam Nagar, Chandkheda, Ahmedabad, Gujarat 382424
             </address>
           </div>
-          <div class="flex gap-2 text-gray-500">
-            <i class="ri-mail-send-line"></i>
+          <div className="flex gap-2 text-gray-500">
+            <i className="ri-mail-send-line"></i>
             <p>example@email.com</p>
           </div>
-          <div class="flex gap-2 text-gray-500">
-            <i class="ri-phone-line"></i>
+          <div className="flex gap-2 text-gray-500">
+            <i className="ri-phone-line"></i>
             <p>+91 123 4567890</p>
           </div>
         </div>
@@ -126,7 +127,7 @@ function Footer() {
                 name="email"
                 type="email"
                 required
-                class="border w-full p-2.5 rounded"
+                className="border w-full p-2.5 rounded"
                 placeholder="Enter Email"
               />
               <button
@@ -147,7 +148,7 @@ function Footer() {
             </Link>
             <Link
               to="#"
-              class="border bg-white px-2.5 py-1.5 rounded hover:bg-orange-500 hover:text-white duration-300"
+              className="border bg-white px-2.5 py-1.5 rounded hover:bg-orange-500 hover:text-white duration-300"
             >
               <i className="ri-twitter-x-line"></i>
             </Link>

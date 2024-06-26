@@ -18,12 +18,12 @@ function AboutUs() {
       </div>
 
       <div
-        className="w-4/12 mx-auto text-center border-2 border-orange-500 text-white rounded-md px-28 py-7 m-10 bg-[#EA580C] 
+        className="md:w-6/12 w-7/12 mx-auto text-center border-2 border-orange-500 text-white rounded-md md:px-28 md:py-7 px-10 py-3 m-10 bg-[#EA580C] 
       hover:bg-transparent hover:text-black duration-300 animate__animated animate__zoomIn"
       >
-        <h1 className="font-semibold  text-4xl">About Us</h1>
+        <h1 className="font-semibold  md:text-4xl text-xl">About Us</h1>
       </div>
-      <div className=" py-20 flex justify-around gap-8 w-10/12 mx-auto animate__animated animate__backInRight">
+      <div className="py-20 flex lg:justify-around flex-col items-center overflow-hidden gap-8 w-10/12 mx-auto">
         <img
           src="./images/study.jpg"
           alt="study"

@@ -27,10 +27,13 @@ function FlexGame() {
     level.current.style.alignItems = align;
   };
 
-  const clear = (e) => {
+  const clear = (level) => {
     setDisplay("");
     setJustify("");
     setAlign("");
+    level.current.style.display = "";
+    level.current.style.justifyContent = "";
+    level.current.style.alignItems = "";
   };
   // const flex2 = "flex justify-center";
   return (
@@ -101,12 +104,12 @@ function FlexGame() {
             >
               Home
             </button>
-            <button
+            {/* <button
               type="submit"
               className="px-8 py-2.5 ml-3 bg-pink-600 font-semibold text-2xl text-white"
             >
               Clear
-            </button>
+            </button> */}
           </form>
         </div>
         <div className="w-[600px] h-[225px] bg-red-300 p-2 ">
@@ -136,15 +139,21 @@ function FlexGame() {
         <SwiperSlide>
           <div
             ref={level1}
-            className="border-2 border-orange-500 h-[400px] relative gap-4 p-2"
+            className="border-2 border-orange-500 h-[400px] relative gap-4 p-2 rounded-lg"
           >
-            <div className="w-[100px] h-1 bg-orange-600 absolute top-[64%] left-[38.4%] "></div>
-            <div className="w-[100px] h-1 bg-pink-600 absolute top-[64%] left-[46.5%] "></div>
-            <div className="w-[100px] h-1 bg-blue-600 absolute top-[64%] left-[54.7%] "></div>
+            <div className="w-[100px] h-1 bg-red-500 absolute top-[64%] left-[38.4%] "></div>
+            <div className="w-[100px] h-1 bg-blue-500 absolute top-[64%] left-[46.5%] "></div>
+            <div className="w-[100px] h-1 bg-green-500 absolute top-[64%] left-[54.7%] "></div>
 
-            <div className="w-[100px] h-[100px] rounded bg-orange-600 box"></div>
-            <div className="w-[100px] h-[100px] rounded bg-pink-600 box"></div>
-            <div className="w-[100px] h-[100px] rounded bg-blue-600 box"></div>
+            <div className="w-[100px] h-[100px] rounded  box">
+              <img src="./images/santa1.png" alt="santa1" width={100} />
+            </div>
+            <div className="w-[100px] h-[100px] rounded  box">
+              <img src="./images/santa2.png" alt="santa2" width={100} />
+            </div>
+            <div className="w-[100px] h-[100px] rounded  box">
+              <img src="./images/santa3.png" alt="santa3" width={100} />
+            </div>
             <h2 className="text-2xl absolute bottom-2 right-5 border-2 border-orange-500 p-2">
               Level 1
             </h2>
@@ -153,24 +162,39 @@ function FlexGame() {
               onClick={() => {
                 click(level1);
               }}
-              className="px-8 py-2.5 bg-orange-600 absolute top-2 right-4 font-semibold text-2xl text-white"
+              className="px-9 py-2.5 bg-orange-600 absolute top-2 right-4 rounded-md font-semibold text-2xl text-white"
             >
               Click
+            </button>
+            <button
+              onClick={() => {
+                clear(level1);
+              }}
+              type="submit"
+              className="px-[34px] py-2.5 ml-3 bg-pink-600  absolute top-20 right-4 rounded-md font-semibold text-2xl text-white"
+            >
+              Clear
             </button>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div
             ref={level2}
-            className="border-2 border-orange-500 h-[400px] relative gap-4 p-2"
+            className="border-2 border-orange-500 h-[400px] relative gap-4 p-2 rounded-lg"
           >
-            <div className="w-[100px] h-1 bg-orange-600 absolute top-[64%] left-[13.2%] "></div>
-            <div className="w-[100px] h-1 bg-pink-600 absolute top-[64%] left-[46.5%] "></div>
-            <div className="w-[100px] h-1 bg-blue-600 absolute top-[64%] right-[13.2%] "></div>
+            <div className="w-[100px] h-1 bg-red-500 absolute top-[64%] left-[13.2%] "></div>
+            <div className="w-[100px] h-1 bg-blue-500 absolute top-[64%] left-[46.5%] "></div>
+            <div className="w-[100px] h-1 bg-green-500 absolute top-[64%] right-[13.2%] "></div>
 
-            <div className="w-[100px] h-[100px] rounded bg-orange-600 box"></div>
-            <div className="w-[100px] h-[100px] rounded bg-pink-600 box"></div>
-            <div className="w-[100px] h-[100px] rounded bg-blue-600 box"></div>
+            <div className="w-[100px] h-[100px] rounded  box">
+              <img src="./images/santa1.png" alt="santa1" width={100} />
+            </div>
+            <div className="w-[100px] h-[100px] rounded  box">
+              <img src="./images/santa2.png" alt="santa2" width={100} />
+            </div>
+            <div className="w-[100px] h-[100px] rounded  box">
+              <img src="./images/santa3.png" alt="santa3" width={100} />
+            </div>
 
             <h2 className="text-2xl absolute bottom-2 right-5 border-2 border-orange-500 p-2">
               Level 2
@@ -180,9 +204,18 @@ function FlexGame() {
               onClick={() => {
                 click(level2);
               }}
-              className="px-8 py-2.5 bg-orange-600 absolute top-0 right-0 font-semibold text-2xl text-white"
+              className="px-9 py-2.5 bg-orange-600 absolute top-2 right-4 rounded-md font-semibold text-2xl text-white"
             >
               Click
+            </button>
+            <button
+              onClick={() => {
+                clear(level2);
+              }}
+              type="submit"
+              className="px-[34px] py-2.5 ml-3 bg-pink-600  absolute top-20 right-4 rounded-md font-semibold text-2xl text-white"
+            >
+              Clear
             </button>
           </div>
         </SwiperSlide>
@@ -190,15 +223,21 @@ function FlexGame() {
         <SwiperSlide>
           <div
             ref={level3}
-            className="border-2 border-orange-500 h-[400px] relative gap-4 p-2"
+            className="border-2 border-orange-500 h-[400px] relative gap-4 p-2 rounded-lg"
           >
-            <div className="w-[100px] h-1 bg-orange-600 absolute top-[28%] left-[19.4%] "></div>
-            <div className="w-[100px] h-1 bg-pink-600 absolute top-[28%] left-[46.5%] "></div>
-            <div className="w-[100px] h-1 bg-blue-600 absolute top-[28%] right-[19.4%] "></div>
+            <div className="w-[100px] h-1 bg-red-500 absolute top-[28%] left-[19.4%] "></div>
+            <div className="w-[100px] h-1 bg-blue-500 absolute top-[28%] left-[46.5%] "></div>
+            <div className="w-[100px] h-1 bg-green-500 absolute top-[28%] right-[19.4%] "></div>
 
-            <div className="w-[100px] h-[100px] rounded bg-orange-600 box"></div>
-            <div className="w-[100px] h-[100px] rounded bg-pink-600 box"></div>
-            <div className="w-[100px] h-[100px] rounded bg-blue-600 box"></div>
+            <div className="w-[100px] h-[100px] rounded  box">
+              <img src="./images/santa1.png" alt="santa1" width={100} />
+            </div>
+            <div className="w-[100px] h-[100px] rounded  box">
+              <img src="./images/santa2.png" alt="santa2" width={100} />
+            </div>
+            <div className="w-[100px] h-[100px] rounded  box">
+              <img src="./images/santa3.png" alt="santa3" width={100} />
+            </div>
 
             <h2 className="text-2xl absolute bottom-2 right-5 border-2 border-orange-500 p-2">
               Level 3
@@ -208,9 +247,18 @@ function FlexGame() {
               onClick={() => {
                 click(level3);
               }}
-              className="px-8 py-2.5 bg-orange-600 absolute top-2 right-4 font-semibold text-2xl text-white"
+              className="px-9 py-2.5 bg-orange-600 absolute top-2 right-4 rounded-md font-semibold text-2xl text-white"
             >
               Click
+            </button>
+            <button
+              onClick={() => {
+                clear(level3);
+              }}
+              type="submit"
+              className="px-[34px] py-2.5 ml-3 bg-pink-600  absolute top-20 right-4 rounded-md font-semibold text-2xl text-white"
+            >
+              Clear
             </button>
           </div>
         </SwiperSlide>
@@ -218,15 +266,21 @@ function FlexGame() {
         <SwiperSlide>
           <div
             ref={level4}
-            className="border-2 border-orange-500 h-[400px] relative gap-4 p-2"
+            className="border-2 border-orange-500 h-[400px] relative gap-4 p-2 rounded-lg"
           >
-            <div className="w-[100px] h-1 bg-orange-600 absolute top-[98.2%] left-[0.6%] "></div>
-            <div className="w-[100px] h-1 bg-pink-600 absolute top-[98.2%] left-[8.6%] "></div>
-            <div className="w-[100px] h-1 bg-blue-600 absolute top-[98.2%] left-[16.7%] "></div>
+            <div className="w-[100px] h-1 bg-red-500 absolute top-[98.2%] left-[0.6%] "></div>
+            <div className="w-[100px] h-1 bg-blue-500 absolute top-[98.2%] left-[8.6%] "></div>
+            <div className="w-[100px] h-1 bg-green-500 absolute top-[98.2%] left-[16.7%] "></div>
 
-            <div className="w-[100px] h-[100px] rounded bg-orange-600 box"></div>
-            <div className="w-[100px] h-[100px] rounded bg-pink-600 box"></div>
-            <div className="w-[100px] h-[100px] rounded bg-blue-600 box"></div>
+            <div className="w-[100px] h-[100px] rounded  box">
+              <img src="./images/santa1.png" alt="santa1" width={100} />
+            </div>
+            <div className="w-[100px] h-[100px] rounded  box">
+              <img src="./images/santa2.png" alt="santa2" width={100} />
+            </div>
+            <div className="w-[100px] h-[100px] rounded  box">
+              <img src="./images/santa3.png" alt="santa3" width={100} />
+            </div>
 
             <h2 className="text-2xl absolute bottom-2 right-5 border-2 border-orange-500 p-2">
               Level 4
@@ -236,9 +290,18 @@ function FlexGame() {
               onClick={() => {
                 click(level4);
               }}
-              className="px-8 py-2.5 bg-orange-600 absolute top-2 right-4 font-semibold text-2xl text-white"
+              className="px-9 py-2.5 bg-orange-600 absolute top-2 right-4 rounded-md font-semibold text-2xl text-white"
             >
               Click
+            </button>
+            <button
+              onClick={() => {
+                clear(level4);
+              }}
+              type="submit"
+              className="px-[34px] py-2.5 ml-3 bg-pink-600  absolute top-20 right-4 rounded-md font-semibold text-2xl text-white"
+            >
+              Clear
             </button>
           </div>
         </SwiperSlide>
@@ -246,16 +309,21 @@ function FlexGame() {
         <SwiperSlide>
           <div
             ref={level5}
-            className="border-2 border-orange-500 h-[400px] relative gap-4 p-2"
+            className="border-2 border-orange-500 h-[400px] relative gap-4 p-2 rounded-lg"
           >
-            <div className="w-[100px] h-1 bg-orange-600 absolute top-[64%] right-[16.7%] "></div>
-            <div className="w-[100px] h-1 bg-pink-600 absolute top-[64%] right-[8.6%] "></div>
-            <div className="w-[100px] h-1 bg-blue-600 absolute top-[64%] right-[0.6%] "></div>
+            <div className="w-[100px] h-1 bg-red-500 absolute top-[64%] right-[16.7%] "></div>
+            <div className="w-[100px] h-1 bg-blue-500 absolute top-[64%] right-[8.6%] "></div>
+            <div className="w-[100px] h-1 bg-green-500 absolute top-[64%] right-[0.6%] "></div>
 
-            <div className="w-[100px] h-[100px] rounded bg-orange-600 box"></div>
-            <div className="w-[100px] h-[100px] rounded bg-pink-600 box"></div>
-            <div className="w-[100px] h-[100px] rounded bg-blue-600 box"></div>
-
+            <div className="w-[100px] h-[100px] rounded  box">
+              <img src="./images/santa1.png" alt="santa1" width={100} />
+            </div>
+            <div className="w-[100px] h-[100px] rounded  box">
+              <img src="./images/santa2.png" alt="santa2" width={100} />
+            </div>
+            <div className="w-[100px] h-[100px] rounded  box">
+              <img src="./images/santa3.png" alt="santa3" width={100} />
+            </div>
             <h2 className="text-2xl absolute bottom-2 right-5 border-2 border-orange-500 p-2">
               Level 5
             </h2>
@@ -264,9 +332,18 @@ function FlexGame() {
               onClick={() => {
                 click(level5);
               }}
-              className="px-8 py-2.5 bg-orange-600 absolute top-2 right-4 font-semibold text-2xl text-white"
+              className="px-9 py-2.5 bg-orange-600 absolute top-2 right-4 rounded-md font-semibold text-2xl text-white"
             >
               Click
+            </button>
+            <button
+              onClick={() => {
+                clear(level5);
+              }}
+              type="submit"
+              className="px-[34px] py-2.5 ml-3 bg-pink-600  absolute top-20 right-4 rounded-md font-semibold text-2xl text-white"
+            >
+              Clear
             </button>
           </div>
         </SwiperSlide>

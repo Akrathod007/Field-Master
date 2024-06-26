@@ -1,0 +1,67 @@
+{
+  "hash": "74c99caa",
+  "configHash": "314feee7",
+  "lockfileHash": "e3b0c442",
+  "browserHash": "37e58d92",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "f156ae54",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "685c128c",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "8819f98a",
+      "needsInterop": false
+    },
+    "react-router-hash-link": {
+      "src": "../../node_modules/react-router-hash-link/dist/react-router-hash-link.esm.js",
+      "file": "react-router-hash-link.js",
+      "fileHash": "3c27e9fd",
+      "needsInterop": false
+    },
+    "sweetalert2": {
+      "src": "../../node_modules/sweetalert2/dist/sweetalert2.all.js",
+      "file": "sweetalert2.js",
+      "fileHash": "86fc63b1",
+      "needsInterop": true
+    },
+    "swiper/modules": {
+      "src": "../../node_modules/swiper/modules/index.mjs",
+      "file": "swiper_modules.js",
+      "fileHash": "73b9082e",
+      "needsInterop": false
+    },
+    "swiper/react": {
+      "src": "../../node_modules/swiper/swiper-react.mjs",
+      "file": "swiper_react.js",
+      "fileHash": "29dc9c5d",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-QFRTTYOX": {
+      "file": "chunk-QFRTTYOX.js"
+    },
+    "chunk-4XLWLAGL": {
+      "file": "chunk-4XLWLAGL.js"
+    },
+    "chunk-HCGKX5ED": {
+      "file": "chunk-HCGKX5ED.js"
+    },
+    "chunk-WNPTCGAH": {
+      "file": "chunk-WNPTCGAH.js"
+    },
+    "chunk-5WRI5ZAA": {
+      "file": "chunk-5WRI5ZAA.js"
+    }
+  }
+}
